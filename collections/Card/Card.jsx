@@ -1,5 +1,11 @@
 import React from 'react'
-import {StyledCardContainer,StyledCardInfo,StyledcardIcon,StyledTitle,StyledTextContainer} from "./elements"
+import {
+  StyledCardContainer,
+  StyledCardInfo,
+  StyledcardIcon,
+  StyledTitle,
+  StyledTextContainer
+} from "./elements"
 
 export const Card = ({ title,icon,info}) => {
   return (

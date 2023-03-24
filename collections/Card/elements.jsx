@@ -1,12 +1,13 @@
 // Styled elements for the Card go here
-import styled, { css } from "styled-components";
-import { SectionContainer, SectionBigHeading, SectionSubheading, SectionParagraph,} from "~/components";
+import styled from "styled-components";
+import { SectionContainer, SectionSubheading} from "~/components";
 
 export const StyledcardIcon = styled.div`
   background-color: transparent;
   width: 45px;
   height: 45px;
   align-self: center;
+  padding: 25px;
   svg{
     width: 100%;
     height: 100%;
@@ -17,7 +18,7 @@ export const StyledTitle = styled((props) => <SectionSubheading {...props} />)`
   margin: 0;
   color: black;
   text-align: left;
-  font-weight: 500; //loks bold
+  font-weight: 600; 
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <SectionContainer {...props} />)`
@@ -40,7 +41,7 @@ export const StyledCardInfo = styled.p`
 `;
 
 export const StyledCardContainer = styled.div`
-  padding: 30px 30px;
+  padding: 20px 20px;
   display: flex;
   flex-direction: row;
   align-content: center;

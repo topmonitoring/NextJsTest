@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { CardCollection } from "../../collections"; 
-import dynamic from 'next/dynamic'
-import { SectionContainer, SectionBigHeading, SectionSubheading, SectionParagraph,SectioninnerHeading} from "~/components";
-
+import {  SectionBigHeading, SectionSubheading} from "~/components";
+//import dynamic from 'next/dynamic'
 //const BgImage =dynamic(()=>import('../../public/img/background.png'),{ssr:false,})
 
 export const ImageWraper = styled((props) => <div {...props} />)`
@@ -44,6 +43,7 @@ flex-direction: column;
 width: 100%;
 height: 100%;
 margin: auto;
+padding: 10px 50px;
 :hover{
     cursor: pointer;
 }
@@ -59,7 +59,6 @@ export const StyledCardContainer= styled.div`
     flex-direction: column;
   }    
 `;
-
 
 export const StyledCardCollection = styled(({ ...props }) => <CardCollection {...props} />)`
 display:flex;

@@ -1,9 +1,6 @@
 import React from 'react';
-
 import {StyledCardsContainer,StyledCard} from "./elements"
-import { Card } from '../Card/Card';
-import {FaClipboardList} from 'react-icons/fa';
-
+import {FaClipboardList,FaSearch,FaPeopleArrows} from 'react-icons/fa';
 
 export const CardCollection = () => {
     const cardData = [
@@ -14,12 +11,12 @@ export const CardCollection = () => {
         },
         {
           title: 'Search',
-          icon: <FaClipboardList/>,
+          icon: <FaSearch/>,
           info: 'In-depth agency search covering; criteria maching, door knocking and due-dilligence vetting',
         },
         {
           title: 'Pitch',
-          icon: <FaClipboardList/>,
+          icon: <FaPeopleArrows/>,
           info: 'Comprehancive pitch management, including comms, diary management and pitch hosting',
         },
       ];
@@ -27,7 +24,7 @@ export const CardCollection = () => {
       return (
         <StyledCardsContainer>
           {cardData.map((card, index) => (
-            <Card key={index} title={card.title} icon={card.icon} info={card.info} />
+            <StyledCard key={index} title={card.title} icon={card.icon} info={card.info} />
           ))}
         </StyledCardsContainer>
       );

@@ -8,6 +8,7 @@ export const StyledCardsContainer = styled.div`
   align-content: center;
   background-color: transparent;
   border-radius: 10px;
+  width: fit-content;
   @media screen and (max-width: 1024px) {
     width: 80vw;
     margin: auto;
