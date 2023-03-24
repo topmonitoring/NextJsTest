@@ -44,11 +44,20 @@ flex-direction: column;
 width: 100%;
 height: 100%;
 margin: auto;
+:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+    width: 70vw;
+  }  
 `;
 
 export const StyledCardContainer= styled.div`
     display:flex;
     flex-direction: row;
+    @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }    
 `;
 
 

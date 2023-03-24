@@ -4,8 +4,8 @@ import { SectionContainer, SectionBigHeading, SectionSubheading, SectionParagrap
 
 export const StyledcardIcon = styled.div`
   background-color: transparent;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   align-self: center;
   svg{
     width: 100%;
@@ -56,8 +56,5 @@ export const StyledCardContainer = styled.div`
       color: #1544dfdc;
       text-decoration: underline;
     }
-  }
-  @media screen and (max-width: 1024px) {
-    width: 80vw;
   }
   `;

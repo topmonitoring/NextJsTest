@@ -9,7 +9,7 @@ export const StyledCardsContainer = styled.div`
   background-color: transparent;
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
-    width: 60vw;
+    width: 80vw;
     margin: auto;
   }
   `;
