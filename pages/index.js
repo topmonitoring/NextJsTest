@@ -1,4 +1,5 @@
 import { Hero,MainSection } from "../sections";
+import {FaClipboardList,FaSearch,FaPeopleArrows} from 'react-icons/fa';
 
 const heroProps = {
   image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
@@ -8,9 +9,32 @@ const heroProps = {
 };
 const mainSectionProps={
   image: { src: "/img/video.png", alt: "", width: 1000, height: 1680 },
-  bgimage: { src: "/img/background.png", alt: "", width: "100vw", height: "100vh", },
+  bgimage: { src: "/img/background.png", alt: "", width: "100vw", height: "100vh",  },
   BigTitle: "Maneged Agancy Selection",
   SmallTitle:"Stengthen your onboarding process",
+  cardData: [
+    {
+      title: 'Brief',
+      icon: <FaClipboardList/>,
+      info: '<p> Complete <strong> brief writing or simple guidance </strong> on what to include, we"ve got you covered. </p>',
+      variant:"small"
+     
+    },
+    {
+      title: 'Search',
+      icon: <FaSearch/>,
+      info: '<p>In-depth agency search covering; <strong> criteria maching</strong>, door knocking and due-dilligence vetting</p>',
+      variant:"medium"
+  
+    },
+    {
+      title: 'Pitch',
+      icon: <FaPeopleArrows/>,
+      info: '<p>Comprehancive <strong>pitch management</strong>, including comms, diary management and pitch hosting</p>',
+      variant:"big"
+      
+    },
+  ]
 };
 
 export default function Home() {
