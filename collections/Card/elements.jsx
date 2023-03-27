@@ -18,7 +18,7 @@ export const StyledTitle = styled((props) => <SectionSubheading {...props} />)`
   margin: 0;
   color: black;
   text-align: left;
-  font-weight: 600; 
+  font-weight: 600;
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <SectionContainer {...props} />)`
@@ -57,7 +57,6 @@ const CardVariants = {
 };
 
 export const StyledCardContainer = styled(({ variant = "small",...props }) => <div {...props} />)`
-  height: 170px;
   padding: 20px 20px;
   display: flex;
   flex-direction: row;
@@ -76,7 +75,4 @@ export const StyledCardContainer = styled(({ variant = "small",...props }) => <d
     }
   }
   ${({ variant }) => CardVariants[variant]}
-  @media screen and (max-width: 1024px) {
-    height: auto;
-  }
   `;

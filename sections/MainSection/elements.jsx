@@ -10,8 +10,10 @@ z-index: -1;
 
 export const HeroWraper = styled((props) => <div {...props} />)`
 position: relative;
-width: "100vw";
-height: "100vh";
+height: 100vh;
+@media screen and (max-width: 1024px) {
+  min-height: fit-content;
+  }
 `;
 
 export const HeroContent = styled((props) => <div {...props} />)`
@@ -19,20 +21,24 @@ position: relative;
 display: flex;
 flex-direction: column;
 align-items: center;
-@media screen and (max-width: 1024px) {
-    width: 100vw;
-  }
+align-content: center;
+align-self: center;
 `;
 
 export const StyledBigHeading = styled((props) => <SectionBigHeading {...props} />)`
   color: black;
   margin: auto;
   text-align: center;
+  align-self: center;
+  @media screen and (max-width: 1024px) {
+   font-size :1.5rem ;
+  }
 `;
 
 export const StyledSubheding = styled((props) => <SectionSubheading {...props} />)`
   margin: 0 0 1.563rem ;
   text-align: center;
+  align-self: center;
 `;
 
 export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
@@ -40,7 +46,7 @@ max-width: 32.03rem;
 max-height: 65rem;
 display: flex;
 flex-direction: column;
-width: 100%;
+width: 30vw;
 height: 100%;
 margin: auto;
 padding: 10px 50px;
@@ -55,6 +61,7 @@ padding: 10px 50px;
 export const StyledCardContainer= styled.div`
     display:flex;
     flex-direction: row;
+    width: 60vw;
     @media screen and (max-width: 1024px) {
     flex-direction: column;
   }    
