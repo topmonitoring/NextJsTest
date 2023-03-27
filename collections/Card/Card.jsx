@@ -7,13 +7,13 @@ import {
   StyledTextContainer
 } from "./elements"
 
-export const Card = ({ title,icon,info}) => {
+export const Card = ({ title,icon,info,variant}) => {
   return (
-    <StyledCardContainer>
+    <StyledCardContainer variant={variant} >
       <StyledcardIcon>{icon}</StyledcardIcon>
       <StyledTextContainer>
       <StyledTitle>{title}</StyledTitle>
-      <StyledCardInfo>{info}</StyledCardInfo>
+      <StyledCardInfo dangerouslySetInnerHTML={{ __html:  info }}/>
       </StyledTextContainer>
     </StyledCardContainer>
   );

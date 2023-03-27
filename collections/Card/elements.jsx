@@ -1,5 +1,5 @@
 // Styled elements for the Card go here
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import { SectionContainer, SectionSubheading} from "~/components";
 
 export const StyledcardIcon = styled.div`
@@ -40,7 +40,24 @@ export const StyledCardInfo = styled.p`
   }
 `;
 
-export const StyledCardContainer = styled.div`
+const smallSection = css`
+  width: 80%;
+`;
+const mediumSection = css`
+  width: 90%;
+`;
+const bigSection = css`
+  width: 100%;
+`;
+
+const CardVariants = {
+  small: smallSection,
+  medium: mediumSection,
+  big: bigSection,
+};
+
+export const StyledCardContainer = styled(({ variant = "small",...props }) => <div {...props} />)`
+  height: 170px;
   padding: 20px 20px;
   display: flex;
   flex-direction: row;
@@ -57,5 +74,9 @@ export const StyledCardContainer = styled.div`
       color: #1544dfdc;
       text-decoration: underline;
     }
+  }
+  ${({ variant }) => CardVariants[variant]}
+  @media screen and (max-width: 1024px) {
+    height: auto;
   }
   `;
